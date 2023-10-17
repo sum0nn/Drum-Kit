@@ -1,0 +1,178 @@
+body {
+  text-align: center;
+  background-image: url(./images/whiplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent image tiling */
+
+  /* Add a media query for smaller screens (e.g., screens up to 768px wide) */
+  @media (max-width: 768px) {
+    background-size: contain;
+  }
+}
+
+/* Add styles for the dark mode toggle button */
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+footer {
+  padding-top: 100px;
+  color: black;
+  font-family: sans-serif;
+  font-family: bold;
+}
+
+.w {
+  background-image: url(./images/tom1.png);
+}
+
+.a {
+  background-image: url(./images/tom2.png);
+}
+
+.s {
+  background-image: url(./images/kick.png);
+}
+
+.d {
+  background-image: url(./images/tom3.png);
+}
+
+.j {
+  background-image: url(./images/tom4.png);
+}
+
+.k {
+  background-image: url(./images/snare.png);
+}
+
+.l {
+  background-image: url(./images/crash.png);
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 10px 5px;
+}
+
+/* Add a media query for smaller screens (e.g., screens up to 768px wide) */
+@media (max-width: 768px) {
+  body {
+    background-size: 100% auto; /* Adjust the background size for smaller screens */
+  }
+
+  /* Adjust other styles as needed for smaller screens */
+  .drum {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Add a media query for even smaller screens (e.g., screens up to 480px wide) */
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  h1 {
+    font-size: 3rem;
+  }
+  
+  /* Adjust other styles as needed for very small screens */
+}
